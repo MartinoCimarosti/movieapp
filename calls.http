@@ -1,0 +1,23 @@
+//Per titolo
+GET https://www.omdbapi.com/?apikey=d36b67d0&t=Terminator HTTP/1.1
+###
+//Ricerca Globale
+GET https://www.omdbapi.com/?apikey=d36b67d0&s=Terminator HTTP/1.1
+###
+//Ricerca Serie Tv
+GET https://www.omdbapi.com/?apikey=d36b67d0&s=mr+robot&type=series HTTP/1.1
+###
+//Ricerca Videogames
+GET https://www.omdbapi.com/?apikey=d36b67d0&s=terminator&type=game HTTP/1.1
+###
+
+###
+//Ricerca Globale + pagnina 
+GET https://www.omdbapi.com/?apikey=d36b67d0&s=terminator&page=2 HTTP/1.1
+###
+
+###
+//Ricerca Globale + anno
+GET https://www.omdbapi.com/?apikey=d36b67d0&s=terminator&y=2002 HTTP/1.1
+###
+
