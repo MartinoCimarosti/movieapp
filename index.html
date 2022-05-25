@@ -4,15 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mr Robot</title>
 </head>
 <body>
     <script type="module">
-        import {listMrRobot} from "/lib/modulo-api.js"
+        import {listMrRobot, listTerminator} from "/lib/modulo-api.js"
 
         console.log("Esecuzione Inizo");
+        //chiama film
+        listTerminator();
+        //chiama serie TV
         listMrRobot();
         console.log("Fine")
+
+        //chiamata serie tv
+
 
     </script>
 
