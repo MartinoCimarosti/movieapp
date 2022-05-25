@@ -8,17 +8,10 @@
 </head>
 <body>
     <script type="module">
-        import {listMrRobot, listTerminator} from "/lib/modulo-api.js"
-
-        console.log("Esecuzione Inizo");
-        //chiama film
-        listTerminator();
-        //chiama serie TV
-        listMrRobot();
-        console.log("Fine")
-
-        //chiamata serie tv
-
+        import {apiList} from "./lib/modulo-api.js"
+        import {CONTENT_TYPE} from "./lib/config.js"
+        apiList("Terminator", CONTENT_TYPE.MOVIE);
+        apiList("Terminator", CONTENT_TYPE.SERIES);
 
     </script>
 
