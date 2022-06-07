@@ -7,16 +7,23 @@
     <title>Mr Robot</title>
 </head>
 <body>
-<div id="movies"></div>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+    
+
+<section class="hero-section">
+    <div id="movies" class="card-grid">
+
+        
+</section>
 
 
 <script type="module">
     import {apiList} from "./lib/modulo-api.js"
     import {CONTENT_TYPE} from "./lib/config.js"
     //apiList("Terminator", CONTENT_TYPE.MOVIE);
-    //apiList("Mr Robot", CONTENT_TYPE.SERIES);
-    const 
-    const element = getElementById("movies");
+    apiList("Mr_Robot", CONTENT_TYPE.SERIES);
+    
 </script>
 
 </body>
