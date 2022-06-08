@@ -1,14 +1,14 @@
 :root{
     --background-dark: #2d3548;
     --text-light: rgba(255,255,255,0.6);
-    --text-lighter: rgba(255,255,255,0.9);
+    --text-lighter: rgba(255,255,255,0.9) !important;
     --spacing-s: 8px;
     --spacing-m: 16px;
     --spacing-l: 24px;
     --spacing-xl: 32px;
     --spacing-xxl: 64px;
     --width-container: 1200px;
-  }
+  } 
   
   *{
     border: 0;
@@ -25,6 +25,7 @@
   
   body{
     height: 100%;
+  
   }
   
   .hero-section{
@@ -74,7 +75,7 @@
     background-position: center;
     border-radius: var(--spacing-l);
     bottom: 0;
-    filter: brightness(0.75) saturate(1.2) contrast(0.85);
+    filter: brightness(0.50) saturate(1.2) contrast(0.85);
     left: 0;
     position: absolute;
     right: 0;

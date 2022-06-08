@@ -10,29 +10,28 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="css/card.css">
+  <!--SCRIPT PER RENDERE SICURO IL SITO-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.8/purify.min.js" integrity="sha512-M72KfQy4kPuLYC6CeTrN0eA17U1lXEMrr5qEJC/40CLdZGC3HpwPS0esQLqBHnxty2FIcuNdP9EqwSOCLEVJXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
-
-
-    
       <div class="s003">
       <div class="center">
       </div>
       <div class="">
       </div>
+    
         <form>
           <div class="inner-form">
-            <!--
+          <!--    
             <div class="input-field first-wrap">
-              
               <div class="input-select">
                 <select data-trigger="" name="choices-single-defaul">
                   <option placeholder="">Category</option>
                   <option>Film</option>
-                  <option>Serie Tv ect ...</option>
+                  <option>Serie Tv</option>
+                  <option>Serie Tv</option>
                 </select>
-              </div>
-            
+              </div>           
             </div>
             -->
             <div class="input-field second-wrap">
@@ -46,17 +45,17 @@
               </button>
             </div>
           </div>
-        </form>
-        
+        </form> 
       </div>
-      <!-- <script src="js/extention/choices.js"></script> -->
-    
+      <!--cards section-->
       <section class="hero-section">
         <div id="movies" class="card-grid">
-    
       </section>
+
+
+
   
-  
+  <!--<script src="lib/extention/choices.js"></script>  -->
   <script type="module">
     //funzione di ricerca
     import {apiList} from "./lib/modulo-api.js"
@@ -65,14 +64,24 @@
       
 
     function myFunction() {
-        let x = document.getElementById("search").value;
-        console.log("negro");
-        console.log(x);
-        apiList(`${x}`, CONTENT_TYPE.SERIES);
+        let risultato = document.getElementById("search").value;
+        //sanifica il Risulato ed impedisce XSS
+        DOMPurify.sanitize(risultato);
+
+        apiList(`${risultato}`, CONTENT_TYPE.SERIES);
+        
     }
     const bottone = document.getElementById("bottone").onclick = myFunction;
-    
-      
+    const barraric = document.getElementById("search")
+/* enter sto search */
+    var input = document.getElementById("search");
+      input.addEventListener("keypress", function(event) {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          document.getElementById("bottone").click();
+        }
+      });
+
   </script>
 
   </body>
