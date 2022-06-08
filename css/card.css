@@ -61,6 +61,7 @@
   .card{
     list-style: none;
     position: relative;
+    color: rgb(209, 209, 209);
   }
   
   .card:before{
