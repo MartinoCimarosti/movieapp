@@ -117,3 +117,21 @@
     line-height: 1.4;
     word-spacing: 100vw;
   }
+
+  .speech-bubble {
+    background: #ddd;
+    color: #333;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 4em;
+    margin-bottom: 1em;
+    padding: 0 1em;
+    position: relative;
+    text-align: center;
+    vertical-align: top;
+      min-width: 7em;
+  }
+  
+  .speech-bubble.rounded {
+    border-radius: .4em;
+  }
