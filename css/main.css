@@ -834,7 +834,7 @@ top:0;
 }
 
 .s003 {
-  min-height: 50vh;
+  min-height: 25vh;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -993,7 +993,7 @@ top:0;
   color: #fff;
   border: 0;
   cursor: pointer;
-  background: #63c76a;
+  background: #1E1F57;
   transition: all .2s ease-out, color .2s ease-out;
 }
 
