@@ -98,7 +98,7 @@ export const chat = {
             },
             {
                 text: "No / non l'ho mai visto",
-                next: 10
+                next: 11
             }
         ]
     },
@@ -111,19 +111,28 @@ export const chat = {
             }
         ]
     },
-    9: {
-        text: 'Ti piace Die Hard?',
+    11: {
+        text: 'Ti piace Full Metal Jacket?',
         options: [
             {
                 text: 'si',
-                next: 9
+                next: 12
             },
             {
                 text: "No / non l'ho mai visto",
-                next: 10
+                next: 9
             }
         ]
     },
+    12: {
+        text: 'Allora ti consiglo un film!',
+        options: [
+            {
+                text: "Platoon👈",
+                url: "./index.html?platoon"
+            }
+        ]
+    }
 
 
 
