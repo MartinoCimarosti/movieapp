@@ -75,7 +75,7 @@ export const chat = {
                 next: 7
             },
             {
-                text: "No / non l'ho mai visto",
+                text: "No non l'ho mai visto",
                 next: 5
             }
         ]

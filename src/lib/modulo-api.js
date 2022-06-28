@@ -2,7 +2,7 @@ import { BASE_URL } from "./config.js";
 
 //IN QUESTO CASO DIAMO UNA COSTANTE ALL' URL PER PERMETTERE AL CODICE DI PRODUZIONE DI ESSERE
 //PIU' MALNEABILE.
-//FIXME: Allineare il codice
+
 
 export const apiList = (s, type) => {
     const url = BASE_URL + `s=${s}&type=${type}`;
@@ -13,6 +13,19 @@ export const apiList = (s, type) => {
             viewItems(items);
         });
 }
+
+export const apiListTitle = (s) => {
+    const url = BASE_URL + `t=${s}`;
+    fetch(url)
+        .then((response) => response.json())
+        .then((results) => {
+            const items = results.Search;
+            viewItems2(items);
+        });
+}
+
+
+
 
 
 //tirare fuori film
@@ -30,6 +43,54 @@ const viewItems = (items) => {
         pagina.appendChild(createHTMLMovie(item));
     });
 };
+const viewItems2 = (items) => {
+    //devo posizionarmi sul mio html e beccare l'elemento iflms su cui agganciarmi
+
+
+    const pagina = document.getElementById("movies");
+
+   
+    pagina.appendChild(createMovieFull(items));
+
+};
+
+const createMovieFull = (movie) => {
+    const node_title = (movie.Title);
+    const card = document.createElement("a");
+    background.classList.add("card__background");
+    const card_content = document.createElement("div");
+    card_content.classList.add("card__content");
+    const card__heading = document.createElement("h3");
+    const heading_content = document.createTextNode(node_title);
+
+    card.appendChild(background);
+    //card_category.appendChild(text_content);
+    card.appendChild(card_content);
+    //card_content.appendChild(card_category);
+    card_content.appendChild(card__heading);
+    card__heading.appendChild(heading_content);
+
+    return card;
+
+}
+
+/*
+ "Title": "M",
+  "Year": "1931",
+  "Rated": "Passed",
+  "Released": "31 Aug 1931",
+  "Runtime": "99 min",
+  "Genre": "Crime, Mystery, Thriller",
+  "Director": "Fritz Lang",
+  "Writer": "Thea von Harbou, Fritz Lang, Egon Jacobsohn",
+  "Actors": "Peter Lorre, Ellen Widmann, Inge Landgut",
+  "Plot": "When the police in a German city are unable to catch a child-murderer, other criminals join in the manhunt.",
+  "Language": "German",
+  "Country": "Germany",
+  "Awards": "2 wins",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BODA4ODk3OTEzMF5BMl5BanBnXkFtZTgwMTQ2ODMwMzE@._V1_SX300.jpg",
+*/
+
 
 
 

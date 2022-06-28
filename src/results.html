@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.8/purify.min.js" integrity="sha512-M72KfQy4kPuLYC6CeTrN0eA17U1lXEMrr5qEJC/40CLdZGC3HpwPS0esQLqBHnxty2FIcuNdP9EqwSOCLEVJXQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<link rel="stylesheet" href=".src/css/card.css">
+<link rel="stylesheet" href="./css/card.css">
     
 
 <section class="hero-section">
@@ -21,11 +21,11 @@
 
 
 <script type="module">
-    import {apilist2} from ".src/lib/modulo-api.js"
-    import {apiList} from ".src/lib/modulo-api-2.js"
-    import {CONTENT_TYPE} from ".src/lib/config.js"
+   //import { apiList } from "./lib/modulo-api.js"
+    import { apiListTitle } from "./lib/modulo-api.js"
+    import { CONTENT_TYPE } from "./lib/config.js"
     //apiList("Terminator", CONTENT_TYPE.MOVIE);
-    apiList2("Mr_Robot", CONTENT_TYPE.SERIES);
+    apiListTitle("Terminator");
 
 </script>
 
